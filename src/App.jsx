@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     async function getPost() {
-      const file = await fetch(`/public/post-${postId}.md`);
+      const file = await fetch(`/post-${postId}.md`);
       const markdown = await file.text();
 
       setLatestPost(markdown);
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      
+
       <ReactMarkdown children={latestPost} /> 
 
       <button onClick={() => {
